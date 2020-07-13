@@ -1,0 +1,70 @@
+.NavMenu
+    height: 50px
+    width: 100%
+    display: flex
+    justify-content: flex-end
+    align-items: center
+    box-sizing: border-box
+    &__button
+        margin: 2%
+        border: 0
+        background: transparent
+        width: 40px
+        height: 35px
+        border-top: 5px solid black  
+        position: relative 
+        z-index: 10
+        &::before, &::after
+            position: absolute
+            content: ''
+            top: 0
+            left: 0
+            width: 100%
+            border-top: 5px solid black 
+            transform: translateY(10px)
+        &::after
+            transform: translateY(25px)
+        &:focus
+            transform: rotate(45deg) translateY(5px)
+            border: none
+            &::after
+                transform: rotate(-90deg) translateX(-10px)
+                border-top: 5px solid #ffffff
+        &:focus ~ .NavMenu__tresc
+            transform: translateX(0)
+
+    &__tresc
+        display: flex
+        box-sizing: border-box
+        position: absolute
+        width: 30%
+        background-color: #ff9c4e
+        font-family: Montserrat
+        font-size: 29px
+        font-weight: normal
+        font-stretch: normal
+        font-style: normal
+        line-height: 1.55
+        letter-spacing: 1.16px
+        text-align: left
+        color: #ffffff
+        transform: translateX(100%)
+        transition: 0.3s transform ease-in-out
+        & ul
+            margin-top: 65%
+            list-style: none
+        & il
+            margin-top: 10px
+            height: 30px
+        & a
+            display: flex
+            box-sizing: border-box
+            text-decoration: none
+            height: 100%
+            width: 100%
+            &:link
+                color: #ffffff
+            &:visited
+                color: #ffffff
+        &:hover
+            transform: translateX(0)

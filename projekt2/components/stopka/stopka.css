@@ -1,0 +1,36 @@
+.stopka {
+  width: 100%;
+  background-color: #f07f1a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 2%;
+  position: relative;
+  bottom: 0;
+}
+
+.stopka__blok {
+  width: 15%;
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: left;
+  color: #000000;
+  margin-left: 3%;
+  line-height: 1.5;
+}
+
+.stopka__blok--blod {
+  font-weight: bold;
+}
+
+.stopka__blokprawo {
+  width: 52%;
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: right;
+  color: #000000;
+  margin-left: 3%;
+  line-height: 1.5;
+  float: right;
+}
+/*# sourceMappingURL=stopka.css.map */

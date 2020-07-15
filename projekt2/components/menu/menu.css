@@ -1,5 +1,5 @@
 .NavMenu {
-  height: 50px;
+  height: 80px;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -7,66 +7,99 @@
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  background-color: #ffffff;
+  padding-right: 10px;
 }
 
-.NavMenu__button {
-  margin: 2%;
-  border: 0;
-  background: transparent;
+.menu {
+  padding: 10px;
+  display: inline-block;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  margin: 0;
+}
+
+.menu__box {
   width: 40px;
-  height: 35px;
-  border-top: 5px solid black;
+  height: 25px;
+  display: inline-block;
   position: relative;
   z-index: 10;
 }
 
-.NavMenu__button::before, .NavMenu__button::after {
+.menu__inner {
+  width: 100%;
+  height: 5px;
+  background-color: black;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.menu__inner::before, .menu__inner::after {
+  width: 100%;
+  height: 5px;
+  background-color: black;
   position: absolute;
   content: '';
-  top: 0;
   left: 0;
-  width: 100%;
-  border-top: 5px solid black;
-  -webkit-transform: translateY(10px);
-          transform: translateY(10px);
 }
 
-.NavMenu__button::after {
-  -webkit-transform: translateY(25px);
-          transform: translateY(25px);
+.menu__inner::before {
+  top: -10px;
 }
 
-.NavMenu__button:focus {
-  -webkit-transform: rotate(45deg) translateY(5px);
-          transform: rotate(45deg) translateY(5px);
-  border: none;
+.menu__inner::after {
+  top: 10px;
 }
 
-.NavMenu__button:focus::after {
-  -webkit-transform: rotate(-90deg) translateX(-10px);
-          transform: rotate(-90deg) translateX(-10px);
-  border-top: 5px solid #ffffff;
+.menu--active .menu__inner {
+  background-color: transparent;
 }
 
-.NavMenu__button:focus ~ .NavMenu__tresc {
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
+.menu--active .menu__inner:before {
+  -webkit-transform: translateY(10px) rotate(45deg);
+          transform: translateY(10px) rotate(45deg);
+  background-color: #ffffff;
 }
 
-.NavMenu__tresc {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+.menu--active .menu__inner:after {
+  -webkit-transform: translateY(-10px) rotate(-45deg);
+          transform: translateY(-10px) rotate(-45deg);
+  background-color: #ffffff;
+}
+
+.nav {
+  height: 60%;
+  width: 35%;
+  background-color: #ffa966;
   position: absolute;
-  width: 30%;
-  background-color: #ff9c4e;
+  top: 0;
+  right: 0;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: -webkit-transform .3s .1s ease-in-out;
+  transition: -webkit-transform .3s .1s ease-in-out;
+  transition: transform .3s .1s ease-in-out;
+  transition: transform .3s .1s ease-in-out, -webkit-transform .3s .1s ease-in-out;
+}
+
+.nav__list {
+  margin-top: 10%;
+  margin-left: 5%;
+  list-style: none;
+}
+
+.nav__item {
+  margin-bottom: 10px;
   font-family: Montserrat;
   font-size: 29px;
   font-weight: normal;
@@ -76,45 +109,32 @@
   letter-spacing: 1.16px;
   text-align: left;
   color: #ffffff;
-  -webkit-transform: translateX(100%);
-          transform: translateX(100%);
-  -webkit-transition: 0.3s -webkit-transform ease-in-out;
-  transition: 0.3s -webkit-transform ease-in-out;
-  transition: 0.3s transform ease-in-out;
-  transition: 0.3s transform ease-in-out, 0.3s -webkit-transform ease-in-out;
 }
 
-.NavMenu__tresc ul {
-  margin-top: 65%;
-  list-style: none;
-}
-
-.NavMenu__tresc il {
-  margin-top: 10px;
-  height: 30px;
-}
-
-.NavMenu__tresc a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+.nav__item a {
   text-decoration: none;
-  height: 100%;
-  width: 100%;
 }
 
-.NavMenu__tresc a:link {
+.nav__item a:link {
   color: #ffffff;
 }
 
-.NavMenu__tresc a:visited {
+.nav__item a:visited {
   color: #ffffff;
 }
 
-.NavMenu__tresc:hover {
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
+.nav__item a:hover {
+  font-weight: 900;
+  color: #f07f1a;
+}
+
+.nav__item a:active {
+  font-weight: 900;
+  color: #f07f1a;
+}
+
+.nav--active {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
 }
 /*# sourceMappingURL=menu.css.map */

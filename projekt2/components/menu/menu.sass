@@ -1,70 +1,104 @@
 .NavMenu
-    height: 50px
+    height: 80px
     width: 100%
     display: flex
     justify-content: flex-end
-    align-items: center
     box-sizing: border-box
-    &__button
-        margin: 2%
-        border: 0
-        background: transparent
-        width: 40px
-        height: 35px
-        border-top: 5px solid black  
-        position: relative 
-        z-index: 10
-        &::before, &::after
-            position: absolute
-            content: ''
-            top: 0
-            left: 0
-            width: 100%
-            border-top: 5px solid black 
-            transform: translateY(10px)
-        &::after
-            transform: translateY(25px)
-        &:focus
-            transform: rotate(45deg) translateY(5px)
-            border: none
-            &::after
-                transform: rotate(-90deg) translateX(-10px)
-                border-top: 5px solid #ffffff
-        &:focus ~ .NavMenu__tresc
-            transform: translateX(0)
+    align-items: center
+    background-color: #ffffff
+    padding-right: 10px
 
-    &__tresc
-        display: flex
-        box-sizing: border-box
-        position: absolute
-        width: 30%
-        background-color: #ff9c4e
-        font-family: Montserrat
-        font-size: 29px
-        font-weight: normal
-        font-stretch: normal
-        font-style: normal
-        line-height: 1.55
-        letter-spacing: 1.16px
-        text-align: left
+.menu
+    padding: 10px
+    display: inline-block
+    cursor: pointer
+    background-color: transparent
+    border: none
+    margin: 0
+
+.menu__box
+    width: 40px
+    height: 25px
+    display: inline-block
+    position: relative
+    z-index: 10
+
+@mixin menu-line
+    width: 100%
+    height: 5px
+    background-color: black
+    position: absolute
+
+    
+.menu__inner
+    @include menu-line
+    
+    left: 0
+    top: 50%
+    transform: translateY(-50%)
+
+.menu__inner::before, .menu__inner::after
+    @include menu-line
+    
+    content: ''
+    left: 0
+
+.menu__inner::before
+    top: -10px
+
+.menu__inner::after
+    top: 10px
+
+.menu--active .menu__inner
+    background-color: transparent
+
+.menu--active .menu__inner:before
+    transform: translateY(10px) rotate(45deg)
+    background-color: #ffffff
+
+.menu--active .menu__inner:after
+    transform: translateY(-10px) rotate(-45deg)
+    background-color: #ffffff
+
+.nav
+    height: 60%
+    width: 35%
+    background-color: #ffa966
+    position: absolute
+    top: 0
+    right: 0
+    transform: translateX(100%)
+    transition: transform .3s .1s ease-in-out
+
+.nav__list
+    margin-top: 10%
+    margin-left: 5%
+    list-style: none
+
+.nav__item
+    margin-bottom: 10px
+    font-family: Montserrat
+    font-size: 29px
+    font-weight: normal
+    font-stretch: normal
+    font-style: normal
+    line-height: 1.55
+    letter-spacing: 1.16px
+    text-align: left
+    color: #ffffff
+    a 
+        text-decoration: none
+    a:link
         color: #ffffff
-        transform: translateX(100%)
-        transition: 0.3s transform ease-in-out
-        & ul
-            margin-top: 65%
-            list-style: none
-        & il
-            margin-top: 10px
-            height: 30px
-        & a
-            display: flex
-            box-sizing: border-box
-            text-decoration: none
-            height: 100%
-            width: 100%
-            &:link
-                color: #ffffff
-            &:visited
-                color: #ffffff
-        &:hover
-            transform: translateX(0)
+    a:visited
+        color: #ffffff
+    a:hover 
+        font-weight: 900
+        color: #f07f1a
+    a:active 
+        font-weight: 900
+        color: #f07f1a
+        
+
+.nav--active
+    transform: translateX(0%)

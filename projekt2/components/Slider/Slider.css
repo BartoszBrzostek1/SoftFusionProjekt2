@@ -3,27 +3,90 @@
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-}
-
-.BlokSlider__text {
-  font-family: monospace;
-  font-size: 28.7px;
-  font-weight: 500;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.7;
-  letter-spacing: normal;
-  text-align: left;
-  color: #010101;
-  padding-left: 10%;
-  padding-top: 7%;
-  width: 30%;
+  position: relative;
 }
 
 .BlokSlider__slider {
-  background-image: linear-gradient(208deg, #dfbc8a 111%, #dfbc8a 90%, #e89e52 55%, #f07f1a 28%, #f07f1a -8%, #f07f1a -11%);
+  background-color: #f07f1a;
   width: 50%;
   height: 650px;
-  margin-left: 10%;
+  position: absolute;
+  right: 0;
+}
+
+.BlokSlider__img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.BlokSlider__track {
+  background: transparent;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.BlokSlider__trackList {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  position: relative;
+  height: 100%;
+  -webkit-transition: -webkit-transform 250ms ease-in;
+  transition: -webkit-transform 250ms ease-in;
+  transition: transform 250ms ease-in;
+  transition: transform 250ms ease-in, -webkit-transform 250ms ease-in;
+}
+
+.BlokSlider__trackElement {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80%;
+  height: 80%;
+}
+
+.BlokSlider__button {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  height: 200px;
+  cursor: pointer;
+}
+
+.BlokSlider__button .--lewy {
+  left: 2px;
+}
+
+.BlokSlider__button .--prawy {
+  right: 22px;
+}
+
+.BlokSlider__nav {
+  background: #f07f1a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 5px;
+}
+
+.BlokSlider__indi {
+  border: none;
+  border: 1px solid black;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  margin: 0 10px;
+  background: transparent;
+}
+
+.BlokSlider__indi.--a {
+  background: #000000;
 }
 /*# sourceMappingURL=Slider.css.map */

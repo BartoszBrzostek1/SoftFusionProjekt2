@@ -30,7 +30,7 @@
   height: 25px;
   display: inline-block;
   position: relative;
-  z-index: 10;
+  z-index: 100;
 }
 
 .menu__inner {
@@ -78,7 +78,7 @@
 }
 
 .nav {
-  height: 60%;
+  height: 45%;
   width: 35%;
   background-color: #ffa966;
   position: absolute;
@@ -90,6 +90,7 @@
   transition: -webkit-transform .3s .1s ease-in-out;
   transition: transform .3s .1s ease-in-out;
   transition: transform .3s .1s ease-in-out, -webkit-transform .3s .1s ease-in-out;
+  z-index: 90;
 }
 
 .nav__list {
@@ -136,5 +137,114 @@
 .nav--active {
   -webkit-transform: translateX(0%);
           transform: translateX(0%);
+}
+
+.navForm {
+  height: 100%;
+  width: 100%;
+  background-color: #ffa966;
+  position: absolute;
+  top: 95%;
+  right: 0;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: -webkit-transform .3s .1s ease-in-out;
+  transition: -webkit-transform .3s .1s ease-in-out;
+  transition: transform .3s .1s ease-in-out;
+  transition: transform .3s .1s ease-in-out, -webkit-transform .3s .1s ease-in-out;
+  z-index: 90;
+}
+
+.navForm__form {
+  padding: 3% 10% 10% 10%;
+  position: relative;
+}
+
+.navForm__name {
+  width: 50%;
+  border: none;
+  border-bottom: 1px solid #575757;
+  background: transparent;
+  font-size: 16px;
+  font-weight: 300;
+  text-align: left;
+  color: #000000;
+  margin-bottom: 5%;
+}
+
+.navForm__mail {
+  width: 50%;
+  border: none;
+  border-bottom: 1px solid #575757;
+  background: transparent;
+  font-size: 16px;
+  font-weight: 300;
+  text-align: left;
+  color: #000000;
+  margin-bottom: 5%;
+}
+
+.navForm__textarea {
+  width: 50%;
+  height: 180px;
+  border: solid 1px #575757;
+  background: transparent;
+  font-size: 16px;
+  font-weight: 300;
+  text-align: left;
+  color: #000000;
+  margin-bottom: 5%;
+}
+
+.navForm__adres {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: 0.56px;
+  text-align: right;
+  color: #000000;
+  position: absolute;
+  right: 10%;
+  bottom: 45%;
+  width: 30%;
+}
+
+.navForm__adres --blod {
+  font-weight: bold;
+}
+
+.navForm__wyslij {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  font-weight: 900;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.04;
+  letter-spacing: 0.96px;
+  text-align: left;
+  color: #000000;
+  margin-left: 30%;
+}
+
+.navForm__wyslij a:link {
+  color: #000000;
+}
+
+.navForm__wyslij a:visited {
+  color: #000000;
+}
+
+.navForm--active {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
+.clickForm:hover {
+  color: #f07f1a;
+  font-weight: 900;
+  cursor: pointer;
 }
 /*# sourceMappingURL=menu.css.map */

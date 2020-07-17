@@ -21,21 +21,31 @@
         text-align: left
         color: #010101
 
+
+
+.BlokSlider__warp
+    width: 100%
+    height: 90%
+    overflow: hidden
+
+
 .BlokSlider__inner
-    width: 80%
-    height: 80%
-    position: relative 
+    width: 500%
+    height: 100%
+    position: relative
     left: -100%
 
-.slide
-    width: 30%
-    height: 30%
+
+.slide 
+    width: 20%
+    height: 100%
     float: left
-    font-size: 100px
+    font-size: 26px
     color: black
     display: flex
-    justify-content: center
-    align-items: center
+    img 
+        width: 90%
+        height: 90%
 
 .button 
     width: 30px
@@ -43,6 +53,7 @@
     border-top: 2px solid black
     position: absolute
     cursor: pointer
+
 
 .prev 
     border-left: 2px solid black
@@ -54,10 +65,3 @@
     border-right: 2px solid black
     right: 10%
     transform: rotate(45deg)
-
-.BlokSlider__wrap
-    width: 90%
-    height: 90%
-    overflow: hidden
-
-

@@ -1,4 +1,5 @@
 .BlokSlider {
+  margin-bottom: 13%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -9,84 +10,73 @@
 .BlokSlider__slider {
   background-color: #f07f1a;
   width: 50%;
-  height: 650px;
+  height: 600px;
   position: absolute;
   right: 0;
 }
 
-.BlokSlider__img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+.BlokSlider__text {
+  margin: 10% 0 0 10%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 28.7px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.7;
+  letter-spacing: normal;
+  text-align: left;
+  color: #010101;
 }
 
-.BlokSlider__track {
-  background: transparent;
-  height: 100%;
-  position: relative;
-  overflow: hidden;
-}
-
-.BlokSlider__trackList {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  position: relative;
-  height: 100%;
-  -webkit-transition: -webkit-transform 250ms ease-in;
-  transition: -webkit-transform 250ms ease-in;
-  transition: transform 250ms ease-in;
-  transition: transform 250ms ease-in, -webkit-transform 250ms ease-in;
-}
-
-.BlokSlider__trackElement {
-  position: absolute;
-  top: 0;
-  left: 0;
+.BlokSlider__inner {
   width: 80%;
   height: 80%;
+  position: relative;
+  left: -100%;
 }
 
-.BlokSlider__button {
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  height: 200px;
-  cursor: pointer;
-}
-
-.BlokSlider__button .--lewy {
-  left: 2px;
-}
-
-.BlokSlider__button .--prawy {
-  right: 22px;
-}
-
-.BlokSlider__nav {
-  background: #f07f1a;
+.slide {
+  width: 30%;
+  height: 30%;
+  float: left;
+  font-size: 100px;
+  color: black;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 5px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.BlokSlider__indi {
-  border: none;
-  border: 1px solid black;
-  border-radius: 50%;
-  width: 20px;
-  height: 20px;
-  margin: 0 10px;
-  background: transparent;
+.button {
+  width: 30px;
+  height: 30px;
+  border-top: 2px solid black;
+  position: absolute;
+  cursor: pointer;
 }
 
-.BlokSlider__indi.--a {
-  background: #000000;
+.prev {
+  border-left: 2px solid black;
+  left: 10%;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.next {
+  border-right: 2px solid black;
+  right: 10%;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.BlokSlider__wrap {
+  width: 90%;
+  height: 90%;
+  overflow: hidden;
 }
 /*# sourceMappingURL=Slider.css.map */

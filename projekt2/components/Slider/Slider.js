@@ -1,28 +1,24 @@
-const track = document.querySelector('.BlokSlider__trackList');
-const slides = Array.from(track.children);
-const nextButton = document.querySelector('.BlokSlider__button .--prawy');
-const prevButton = document.querySelector('.BlokSlider__button .--lewy');
-const dotsNavs = document.querySelector('.BlokSlider__nav');
-const dots = Array.from(dotsNavs.children);
+$(function() {
+    var inWrap = $('.BlokSlider__inner');
+    $('.prev').on('click', function() {
+  
+      inWrap.animate({left: '0%'}, 300, function(){
+  
+        inWrap.css('left', '-100%');
+  
+        $('.slide').first().before($('.slide').last());
+  
+      });
+    });
 
-
-const slideSize = slides[0].getBoundingClientRect();
-const slideWidth = slideSize.width;
-
-const setSlide = (slide, index) => {
-    slide.style.left = slideWidth * index + 'px';
-};
-
-slides.forEach(setSlide);
-
-const move = (track, blokSlide, targetSlide) => {
-    track.style.transform = 'translateX(-' + targetSlide.style.left + ')';
-    blokSlide.classList.remove('BlokiSlider__trackElement');
-    targetSlide.classList.add('BlokiSlider__trackElement');
-};
-
-nextButton.addEventListener('click', e => {
-    const blokSlide = track.querySelector('.BlokSlider__trackElement');
-    const nextSlide = blokSlide.nextElementSibling;
-    move(track, blokSlide, nextSlide);
-})
+    $('.next').on('click', function() {
+  
+      inWrap.animate({left: '-200%'}, 300, function(){
+  
+        inWrap.css('left', '-100%');
+  
+        $('.slide').last().after($('.slide').first());
+  
+      });
+    });
+  })

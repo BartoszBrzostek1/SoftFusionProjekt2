@@ -9,6 +9,7 @@ body {
   margin-right: auto;
   background-color: #ffffff;
   min-height: 900px;
+  overflow-x: hidden;
 }
 
 .stronaSzerokosc--bezowy {
@@ -21,6 +22,7 @@ body {
   color: black;
   font-weight: bold;
   margin-left: 5%;
+  text-decoration: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -60,6 +62,21 @@ body {
   display: flex;
   margin: 5%;
   margin-top: 7%;
+}
+
+.BlokRebel {
+  width: 100%;
+  background-color: #d8d8d8;
+  padding: 0.2% 0 1% 0;
+  position: relative;
+}
+
+.BlokRebel__portfolio {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 50px;
 }
 
 .Blok {
@@ -481,6 +498,64 @@ body {
   color: #000000;
 }
 
+.Blok__kafelki {
+  margin: 5% 2% 0 5%;
+  width: 15%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 1.24;
+  text-align: left;
+  color: #000000;
+}
+
+.Blok__kafelki .--tytul {
+  width: 100%;
+  font-size: 26px;
+  font-weight: 900;
+  margin: 0;
+}
+
+.Blok__rebelUslugi {
+  width: 50%;
+  margin: 10% 0 5% 5%;
+  position: relative;
+}
+
+.Blok__wiecej {
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 1.04;
+  letter-spacing: 0.96px;
+  text-align: left;
+  color: #000000;
+  position: absolute;
+  right: 250px;
+  bottom: 10px;
+}
+
+.Blok__wiecej a:link {
+  color: #000000;
+}
+
+.Blok__wiecej a:visited {
+  color: #000000;
+}
+
+.Blok__klienciImg {
+  margin: 0 0 0 9%;
+  width: 10%;
+  height: 10%;
+}
+
+.Blok__klienciImg img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+}
+
 .NavMenu {
   height: 80px;
   width: 100%;
@@ -732,6 +807,7 @@ body {
 }
 
 .BlokSlider {
+  margin-bottom: 13%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -742,85 +818,74 @@ body {
 .BlokSlider__slider {
   background-color: #f07f1a;
   width: 50%;
-  height: 650px;
+  height: 600px;
   position: absolute;
   right: 0;
 }
 
-.BlokSlider__img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+.BlokSlider__text {
+  margin: 10% 0 0 10%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 28.7px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.7;
+  letter-spacing: normal;
+  text-align: left;
+  color: #010101;
 }
 
-.BlokSlider__track {
-  background: transparent;
-  height: 100%;
-  position: relative;
-  overflow: hidden;
-}
-
-.BlokSlider__trackList {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  position: relative;
-  height: 100%;
-  -webkit-transition: -webkit-transform 250ms ease-in;
-  transition: -webkit-transform 250ms ease-in;
-  transition: transform 250ms ease-in;
-  transition: transform 250ms ease-in, -webkit-transform 250ms ease-in;
-}
-
-.BlokSlider__trackElement {
-  position: absolute;
-  top: 0;
-  left: 0;
+.BlokSlider__inner {
   width: 80%;
   height: 80%;
+  position: relative;
+  left: -100%;
 }
 
-.BlokSlider__button {
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  height: 200px;
-  cursor: pointer;
-}
-
-.BlokSlider__button .--lewy {
-  left: 2px;
-}
-
-.BlokSlider__button .--prawy {
-  right: 22px;
-}
-
-.BlokSlider__nav {
-  background: #f07f1a;
+.slide {
+  width: 30%;
+  height: 30%;
+  float: left;
+  font-size: 100px;
+  color: black;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 5px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.BlokSlider__indi {
-  border: none;
-  border: 1px solid black;
-  border-radius: 50%;
-  width: 20px;
-  height: 20px;
-  margin: 0 10px;
-  background: transparent;
+.button {
+  width: 30px;
+  height: 30px;
+  border-top: 2px solid black;
+  position: absolute;
+  cursor: pointer;
 }
 
-.BlokSlider__indi.--a {
-  background: #000000;
+.prev {
+  border-left: 2px solid black;
+  left: 10%;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.next {
+  border-right: 2px solid black;
+  right: 10%;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.BlokSlider__wrap {
+  width: 90%;
+  height: 90%;
+  overflow: hidden;
 }
 
 .stopka {
@@ -890,6 +955,9 @@ body {
   .Blok__rekrutacjaText2 {
     width: 80%;
   }
+  .Blok__kafelki {
+    width: 80%;
+  }
   .nav {
     width: 50%;
   }
@@ -898,6 +966,21 @@ body {
   }
   .navForm {
     width: 100%;
+  }
+  .BlokSlider {
+    width: 100%;
+    height: 100%;
+  }
+  .BlokSlider__slider {
+    height: 100%;
+    width: 50%;
+    margin-bottom: 10%;
+  }
+  .BlokSlider__text {
+    width: 80%;
+    font-size: 24px;
+    margin-left: 2%;
+    margin-bottom: 2%;
   }
 }
 
@@ -964,6 +1047,26 @@ body {
   .Blok__rekrutacjaText2 {
     width: 80%;
   }
+  .Blok__kafelki {
+    width: 80%;
+  }
+  .Blok__rebelUslugi {
+    width: 90%;
+  }
+  .Blok__rebelUslugi img {
+    width: 100%;
+  }
+  .Blok__klienciImg {
+    width: 70%;
+  }
+  .BlokRebel {
+    width: 100%;
+    margin-top: 3%;
+  }
+  .BlokRebel__portfolio {
+    display: block;
+    width: 115%;
+  }
   .stopka__blok {
     margin-right: 7%;
     margin-left: 0;
@@ -980,6 +1083,22 @@ body {
   }
   .navForm {
     width: 100%;
+  }
+  .BlokSlider {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 50%;
+    display: block;
+  }
+  .BlokSlider__slider {
+    height: 80%;
+    width: 100%;
+    margin-bottom: 10%;
+  }
+  .BlokSlider__text {
+    width: 90%;
+    margin-left: 1%;
+    margin-bottom: 2%;
   }
 }
 /*# sourceMappingURL=main.css.map */

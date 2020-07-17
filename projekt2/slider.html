@@ -5,35 +5,28 @@
     <title>My test page</title>
     <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1'>
     <link rel='stylesheet' href='main.css'>
+    <script src="components/Slider/jquery-3.5.1.js"></script>
+    <script src="components/menu/Slider.js"></script>
   </head>
   <body>
     <div class="stronaSzerokosc"> 
         <div class="BlokSlider">
             <div class="BlokSlider__slider">
-                <button class="BlokSlider__button --lewy"></button>
-                <div class="BlokSlider__track">
-                    <ul class="BlokSlider__trackList">
-                        <li class="BlokSlider__trackElement">
-                            <img class="BlokSlider__img" src="img/poster_1_rebel.png">
-                        </li>
-                        <li class="BlokSlider__trackElement">
-                            <img class="BlokSlider__img" src="img/poster_1_rebel.png">
-                        </li>
-                        <li class="BlokSlider__trackElement">
-                            <img class="BlokSlider__img" src="img/poster_1_rebel.png">
-                        </li>
-                    </ul>
+                <div class="BlokSlider__wrap">
+                    <div class="BlokSlider__inner">
+                        <div class="slide" style="background: #E54B4B;">1</div>
+                        <div class="slide" style="background: #61BFAD;">2</div>
+                        <div class="slide" style="background: #F0CF61;">3</div>
+                        <div class="slide" style="background: #0E38B1;">4</div>
+                        <div class="slide" style="background: #C6D7C7;">5</div>
+                    </div>
                 </div>
-                <button class="BlokSlider__button --prawy"></button>
-                <div class="BlokSlider__nav">
-                    <button class="BlokSlider__indi --a"></button>
-                    <button class="BlokSlider__indi"></button>
-                    <button class="BlokSlider__indi"></button>
-                </div>
+                <div class="button prev"></div>
+                <div class="button next"></div>
             </div>
         </div>
     </div>
-    <script src="components/menu/menu.js"></script>
-    <script src="components/Slider/Slider.js"></script>
+    <script src="components/Slider/jquery-3.5.1.js"></script>
+    <script src="components/menu/Slider.js"></script>
   </body>
 </html>
